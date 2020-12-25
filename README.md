@@ -1,3 +1,3 @@
 # Multi-cycle-CPU
-code with vivado HDL
+code with verilog
 runing on FPGA
