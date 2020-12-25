@@ -1,16 +1,16 @@
 //
 // Vivado(TM)
 // rundef.js: a Vivado-generated Runs Script for WSH 5.1/5.6
-// Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+// Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //
 
 var WshShell = new ActiveXObject( "WScript.Shell" );
 var ProcEnv = WshShell.Environment( "Process" );
 var PathVal = ProcEnv("PATH");
 if ( PathVal.length == 0 ) {
-  PathVal = "F:/Vivado/SDK/2016.2/bin;F:/Vivado/Vivado/2016.2/ids_lite/ISE/bin/nt64;F:/Vivado/Vivado/2016.2/ids_lite/ISE/lib/nt64;F:/Vivado/Vivado/2016.2/bin;";
+  PathVal = "F:/vivado/SDK/2018.2/bin;F:/vivado/Vivado/2018.2/ids_lite/ISE/bin/nt64;F:/vivado/Vivado/2018.2/ids_lite/ISE/lib/nt64;F:/vivado/Vivado/2018.2/bin;";
 } else {
-  PathVal = "F:/Vivado/SDK/2016.2/bin;F:/Vivado/Vivado/2016.2/ids_lite/ISE/bin/nt64;F:/Vivado/Vivado/2016.2/ids_lite/ISE/lib/nt64;F:/Vivado/Vivado/2016.2/bin;" + PathVal;
+  PathVal = "F:/vivado/SDK/2018.2/bin;F:/vivado/Vivado/2018.2/ids_lite/ISE/bin/nt64;F:/vivado/Vivado/2018.2/ids_lite/ISE/lib/nt64;F:/vivado/Vivado/2018.2/bin;" + PathVal;
 }
 
 ProcEnv("PATH") = PathVal;
@@ -23,7 +23,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
-         "-log Main.vds -m64 -mode batch -messageDb vivado.pb -notrace -source Main.tcl" );
+         "-log Main.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Main.tcl" );
 
 
 

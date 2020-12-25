@@ -3,7 +3,7 @@
 # 
 # Vivado(TM)
 # runme.sh: a Vivado-generated Runs Script for UNIX
-# Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+# Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 # 
 
 echo "This script was generated under a different operating system."
@@ -11,9 +11,9 @@ echo "Please update the PATH and LD_LIBRARY_PATH variables below, before executi
 exit
 
 if [ -z "$PATH" ]; then
-  PATH=F:/Vivado/SDK/2016.2/bin;F:/Vivado/Vivado/2016.2/ids_lite/ISE/bin/nt64;F:/Vivado/Vivado/2016.2/ids_lite/ISE/lib/nt64:F:/Vivado/Vivado/2016.2/bin
+  PATH=F:/vivado/SDK/2018.2/bin;F:/vivado/Vivado/2018.2/ids_lite/ISE/bin/nt64;F:/vivado/Vivado/2018.2/ids_lite/ISE/lib/nt64:F:/vivado/Vivado/2018.2/bin
 else
-  PATH=F:/Vivado/SDK/2016.2/bin;F:/Vivado/Vivado/2016.2/ids_lite/ISE/bin/nt64;F:/Vivado/Vivado/2016.2/ids_lite/ISE/lib/nt64:F:/Vivado/Vivado/2016.2/bin:$PATH
+  PATH=F:/vivado/SDK/2018.2/bin;F:/vivado/Vivado/2018.2/ids_lite/ISE/bin/nt64;F:/vivado/Vivado/2018.2/ids_lite/ISE/lib/nt64:F:/vivado/Vivado/2018.2/bin:$PATH
 fi
 export PATH
 
@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='F:/Vivado/vivadoworkspace/multipleCPU/multipleCPU.runs/synth_1'
+HD_PWD='F:/vivadoworkspace/multipleCPU/multipleCPU.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log Main.vds -m64 -mode batch -messageDb vivado.pb -notrace -source Main.tcl
+EAStep vivado -log Main.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Main.tcl
